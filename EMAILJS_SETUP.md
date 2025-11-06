@@ -78,6 +78,20 @@ const publicKey = 'your_public_key'; // Your public key from step 4
 2. **"Template not found"**: Check your Template ID  
 3. **"Invalid public key"**: Check your Public Key
 4. **CORS errors**: Make sure your domain is added to EmailJS allowed origins
+5. **"412 Gmail_API: Request had insufficient authentication scopes"**: 
+   - This is a Gmail OAuth permission issue
+   - **SOLUTION**: Use Outlook/Hotmail instead of Gmail (much more reliable)
+   - Go to EmailJS → Email Services → Add New Service → Select **Outlook**
+   - OR: Delete and reconnect Gmail service, ensuring you grant ALL permissions
+   - OR: Use Gmail with App Password (see below)
+
+### Gmail App Password Method (If you must use Gmail):
+
+1. Enable 2-Factor Authentication: https://myaccount.google.com/security
+2. Create App Password: https://myaccount.google.com/apppasswords
+   - Select "Mail" and "Other (Custom name)"
+   - Name it "EmailJS" and generate
+3. In EmailJS, when connecting Gmail, use the 16-character app password
 
 ### Testing Locally:
 

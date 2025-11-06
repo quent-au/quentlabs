@@ -34,8 +34,6 @@ const Header: React.FC = () => {
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
               <a href="#product" className="text-gray-600 hover:text-gray-900 transition-colors">Product</a>
-              <a href="#pricing" className="text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
-              <a href="#docs" className="text-gray-600 hover:text-gray-900 transition-colors">Docs</a>
               <a href="#how-it-works" className="text-gray-600 hover:text-gray-900 transition-colors">How it Works</a>
               <button 
                 onClick={scrollToBeta}
@@ -61,8 +59,6 @@ const Header: React.FC = () => {
             <div className="md:hidden bg-white border-t border-gray-200">
               <div className="px-4 py-4 space-y-4">
                 <a href="#product" className="block text-gray-600 hover:text-gray-900">Product</a>
-                <a href="#pricing" className="block text-gray-600 hover:text-gray-900">Pricing</a>
-                <a href="#docs" className="block text-gray-600 hover:text-gray-900">Docs</a>
                 <a href="#how-it-works" className="block text-gray-600 hover:text-gray-900">How it Works</a>
                 <button 
                   onClick={scrollToBeta}
