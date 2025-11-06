@@ -69,3 +69,10 @@ const WhyChooseQuent: React.FC = () => {
 };
 
 export default WhyChooseQuent;
+
+
+
+
+
+
+

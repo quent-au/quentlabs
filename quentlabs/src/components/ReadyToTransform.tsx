@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { EMAILJS_CONFIG } from '../config/emailjs';
 
 const ReadyToTransform: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -17,14 +18,9 @@ const ReadyToTransform: React.FC = () => {
     setSubmitStatus('idle');
 
     try {
-      // EmailJS configuration - you'll need to set these up
-      const serviceId = 'service_quentlabs'; // Replace with your EmailJS service ID
-      const templateId = 'template_beta_signup'; // Replace with your EmailJS template ID
-      const publicKey = 'your_public_key'; // Replace with your EmailJS public key
-
       // Prepare email data
       const templateParams = {
-        to_email: 'abhilashsiyer@gmail.com',
+        to_email: EMAILJS_CONFIG.TO_EMAIL,
         from_name: formData.name,
         from_email: formData.email,
         company: formData.company,
@@ -40,7 +36,12 @@ This person wants to join the Quent Labs beta program.`
       };
 
       // Send email using EmailJS
-      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID, 
+        EMAILJS_CONFIG.TEMPLATE_ID, 
+        templateParams, 
+        EMAILJS_CONFIG.PUBLIC_KEY
+      );
       
       setSubmitStatus('success');
       

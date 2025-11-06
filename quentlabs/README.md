@@ -160,3 +160,10 @@ Use Tailwind utility classes or add custom CSS in `src/index.css`.
 ## License
 
 © 2024 Quent Labs. All rights reserved.
+
+
+
+
+
+
+

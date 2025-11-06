@@ -123,3 +123,10 @@ Example:
 ---
 
 **Next Steps**: After setting up EmailJS, your beta signup form will automatically send email notifications to `abhilashsiyer@gmail.com` whenever someone joins the beta program! 🚀
+
+
+
+
+
+
+

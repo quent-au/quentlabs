@@ -245,3 +245,10 @@ After successful deployment:
 6. Configure staging environment
 
 Your Quent Labs landing page should now be live at `https://quentlabs.com`! 🚀
+
+
+
+
+
+
+
