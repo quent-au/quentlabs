@@ -99,7 +99,7 @@ This person wants to join the Quent Labs beta program.`
             Ready to Transform Your Testing?
           </h2>
           <p className="text-xl text-primary-100 max-w-3xl mx-auto">
-            Join the beta and be among the first to experience frictionless mobile testing.
+            Join the beta and be among the first to write tests in plain English, validate with AI, and fix failures fast with Quent Analyze.
           </p>
         </div>
 
@@ -167,25 +167,6 @@ This person wants to join the Quent Labs beta program.`
                 />
               </div>
 
-              <div>
-                <label htmlFor="useCase" className="block text-sm font-medium text-gray-700 mb-2">
-                  Primary Use Case
-                </label>
-                <select
-                  id="useCase"
-                  name="useCase"
-                  value={formData.useCase}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                >
-                  <option value="">Select use case</option>
-                  <option value="mobile-app-testing">Mobile App Testing</option>
-                  <option value="e2e-automation">End-to-End Automation</option>
-                  <option value="regression-testing">Regression Testing</option>
-                  <option value="api-testing">API Testing</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
 
               <button
                 type="submit"

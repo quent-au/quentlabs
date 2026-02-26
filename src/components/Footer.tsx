@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
                 <span className="text-xl font-bold">Quent Labs</span>
               </div>
               <p className="text-gray-400 mb-3">
-                Quality Agents for scalable mobile test automation in plain English.
+                Quality Agents for scalable web, mobile test automation in plain English.
               </p>
               <a href="https://github.com/quent-au" className="text-gray-400 hover:text-white inline-block">
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

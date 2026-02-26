@@ -6,42 +6,35 @@ const CLIExamples: React.FC = () => {
       <div className="container-max">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            CLI Examples
+            Quick Start
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            See how easy it is to create comprehensive mobile tests with simple commands.
+            Get from plain English to running tests in minutes. Use the app or CLI to create tests, run them, and fix failures with Quent Analyze.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Installation */}
           <div className="bg-gray-900 rounded-xl p-6">
-            <h3 className="text-white font-semibold mb-4">Installation</h3>
+            <h3 className="text-white font-semibold mb-4">Install & Run</h3>
             <div className="space-y-2 text-sm">
               <div className="text-green-400">$ npm install -g quent-cli</div>
               <div className="text-green-400">$ quent init</div>
-              <div className="text-green-400">$ quent install</div>
-              <div className="text-green-400">$ quent verify installation</div>
-              <div className="text-green-400">$ quent --version</div>
+              <div className="text-green-400">$ quent run test.json</div>
             </div>
           </div>
 
-          {/* Basic Usage */}
           <div className="bg-gray-900 rounded-xl p-6">
-            <h3 className="text-white font-semibold mb-4">Basic Usage</h3>
+            <h3 className="text-white font-semibold mb-4">Plain English</h3>
             <div className="space-y-2 text-sm">
-              <div className="text-green-400">$ quent generate "Login flow test"</div>
-              <div className="text-green-400">$ quent run test.json</div>
+              <div className="text-green-400">$ quent generate "Login and verify dashboard"</div>
+              <div className="text-green-400">$ quent generate "Filter by Women, validate 4 products"</div>
+            </div>
+          </div>
+
+          <div className="bg-gray-900 rounded-xl p-6">
+            <h3 className="text-white font-semibold mb-4">Cloud & Reports</h3>
+            <div className="space-y-2 text-sm">
               <div className="text-green-400">$ quent run test.json --json</div>
-            </div>
-          </div>
-
-          {/* Advanced Example */}
-          <div className="bg-gray-900 rounded-xl p-6">
-            <h3 className="text-white font-semibold mb-4">Advanced Test</h3>
-            <div className="space-y-2 text-sm">
-              <div className="text-green-400">$ quent generate "Test user registration with email verification and profile setup"</div>
-              <div className="text-green-400">$ quent run test.json</div>
               <div className="text-green-400">$ quent cloud upload</div>
             </div>
           </div>
@@ -52,10 +45,3 @@ const CLIExamples: React.FC = () => {
 };
 
 export default CLIExamples;
-
-
-
-
-
-
-

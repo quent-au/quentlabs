@@ -4,33 +4,33 @@ const HowQuentWorks: React.FC = () => {
   const steps = [
     {
       number: '1',
-      icon: '📝',
-      title: 'Describe Your Test',
-      description: 'Simply describe what you want to test in plain English. No programming expertise, no complex frameworks.'
+      icon: '✍️',
+      title: 'Describe in Plain English',
+      description: 'Write actions and validations in natural language. No code, no complex syntax—just describe what you want to test and what should be true when it’s done.'
     },
     {
       number: '2',
-      icon: '{}',
-      title: 'Generate Test JSON',
-      description: 'Quent AI converts your description into a scalable, low-level test JSON.'
+      icon: '👁️',
+      title: 'AI Runs & Validates',
+      description: 'Quent executes the steps and uses the validate method so the page is checked the way a human would see it—no heaps of assertions, just clear, human-like checks.'
     },
     {
       number: '3',
-      icon: '▶️',
-      title: 'Run Locally or Cloud',
-      description: 'Execute tests on your local environment or upload to Quent Cloud for testing on real devices.'
+      icon: '🔧',
+      title: 'Fix Failures with Quent Analyze',
+      description: 'When a test fails, use Quent Analyze to understand why and get recommended changes. Update tests in plain English so maintenance stays fast.'
     }
   ];
 
   return (
-    <section id="how-it-works" className="section-padding bg-gray-50">
+    <section id="how-it-works" className="section-padding bg-white">
       <div className="container-max">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             How Quent Works
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Three simple steps to automated mobile testing. No complex setup, no learning curve.
+            Write in plain English, validate with AI, fix failures with the Maintenance Agent. Works on Web, Android, and iOS.
           </p>
         </div>
 
@@ -56,10 +56,3 @@ const HowQuentWorks: React.FC = () => {
 };
 
 export default HowQuentWorks;
-
-
-
-
-
-
-
