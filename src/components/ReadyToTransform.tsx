@@ -25,14 +25,14 @@ const ReadyToTransform: React.FC = () => {
         from_email: formData.email,
         company: formData.company,
         use_case: formData.useCase,
-        message: `New Beta Signup:
+        message: `New Demo Request:
         
 Name: ${formData.name}
 Email: ${formData.email}
 Company: ${formData.company}
 Use Case: ${formData.useCase}
 
-This person wants to join the Quent Labs beta program.`
+This person has requested a demo of Quent.`
       };
 
       // Send email using EmailJS
@@ -77,7 +77,7 @@ This person wants to join the Quent Labs beta program.`
     {
       icon: '🎁',
       title: 'Early Access',
-      description: 'Get free access to Quent Cloud during beta period.'
+      description: 'Get free access to Quent Cloud for early adopters.'
     },
     {
       icon: '🤝',
@@ -99,14 +99,14 @@ This person wants to join the Quent Labs beta program.`
             Ready to Transform Your Testing?
           </h2>
           <p className="text-xl text-primary-100 max-w-3xl mx-auto">
-            Join the beta and be among the first to write tests in plain English, validate with AI, and fix failures fast with Quent Analyze.
+            Write tests in plain English, validate with AI, and fix failures fast with Quent Analyze.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Benefits */}
           <div>
-            <h3 className="text-2xl font-semibold mb-8">Benefits of Beta</h3>
+            <h3 className="text-2xl font-semibold mb-8">Why Quent?</h3>
             <div className="space-y-6">
               {betaBenefits.map((benefit, index) => (
                 <div key={index} className="flex items-start">
@@ -173,13 +173,13 @@ This person wants to join the Quent Labs beta program.`
                 disabled={isSubmitting}
                 className="w-full bg-primary-600 hover:bg-primary-700 disabled:bg-gray-400 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
               >
-                {isSubmitting ? 'Joining Beta...' : 'Join Beta Program'}
+                {isSubmitting ? 'Sending...' : 'Book a Demo'}
               </button>
 
               {/* Status Messages */}
               {submitStatus === 'success' && (
                 <div className="text-center text-green-600 text-sm mt-4">
-                  ✅ Successfully joined beta! We'll be in touch soon.
+                  ✅ Request received! We'll be in touch soon.
                 </div>
               )}
               

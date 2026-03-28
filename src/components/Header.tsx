@@ -34,11 +34,20 @@ const Header: React.FC = () => {
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
               <a href="#showcase" className="text-gray-600 hover:text-gray-900 transition-colors">How it Works</a>
+              <a
+                href="https://github.com/quent-au/quent/releases/"
+                className="text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-1"
+              >
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+                Downloads
+              </a>
               <button 
                 onClick={scrollToBeta}
                 className="btn-primary"
               >
-                Get Started
+                Book a Demo
               </button>
             </nav>
 
@@ -58,11 +67,17 @@ const Header: React.FC = () => {
             <div className="md:hidden bg-white border-t border-gray-200">
               <div className="px-4 py-4 space-y-4">
                 <a href="#showcase" className="block text-gray-600 hover:text-gray-900">How it Works</a>
+                <a
+                  href="https://github.com/quent-au/quent/releases/"
+                  className="block text-gray-600 hover:text-gray-900"
+                >
+                  Downloads
+                </a>
                 <button 
                   onClick={scrollToBeta}
                   className="btn-primary w-full"
                 >
-                  Get Started
+                  Book a Demo
                 </button>
               </div>
             </div>
