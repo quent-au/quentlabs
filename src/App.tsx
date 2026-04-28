@@ -1,29 +1,22 @@
 import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import FocusOnFeatures from './components/FocusOnFeatures';
-import ProductShowcase from './components/ProductShowcase';
-import ReadyToTransform from './components/ReadyToTransform';
-import Footer from './components/Footer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import CaseStudyLayout from './layouts/CaseStudyLayout';
+import HomePage from './pages/HomePage';
+import CaseStudiesIndexPage from './pages/CaseStudiesIndexPage';
+import InstantScriptsCaseStudyPage from './pages/InstantScriptsCaseStudyPage';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      <Hero />
-      <ProductShowcase />
-      <FocusOnFeatures />
-      <ReadyToTransform />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/case-studies" element={<CaseStudyLayout />}>
+          <Route index element={<CaseStudiesIndexPage />} />
+          <Route path="instant-scripts" element={<InstantScriptsCaseStudyPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
 export default App;
-
-
-
-
-
-
-

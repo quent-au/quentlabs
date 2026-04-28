@@ -59,7 +59,7 @@ const FocusOnFeatures: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {metrics.map((metric, index) => (
             <div key={index} className="text-center">
-              <div className="text-2xl font-bold text-primary-600 mb-2">
+              <div className="text-2xl font-bold text-gray-900 mb-2">
                 {metric.value}
               </div>
               <div className="text-gray-600">

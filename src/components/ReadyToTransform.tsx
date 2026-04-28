@@ -73,52 +73,22 @@ This person has requested a demo of Quent.`
     });
   };
 
-  const betaBenefits = [
-    {
-      icon: '🎁',
-      title: 'Early Access',
-      description: 'Get free access to Quent Cloud for early adopters.'
-    },
-    {
-      icon: '🤝',
-      title: 'Direct Support',
-      description: 'Work directly with our team to shape the product!'
-    },
-    {
-      icon: '💎',
-      title: 'Lifetime Discount',
-      description: 'Lock in special pricing as an early adopter.'
-    }
-  ];
 
   return (
-    <section id="ready-to-transform" className="section-padding bg-gradient-to-br from-primary-600 to-primary-800 text-white">
+    <section
+      id="ready-to-transform"
+      className="section-padding bg-gradient-to-br from-neutral-950 via-neutral-900 to-black text-white"
+    >
       <div className="container-max">
-        <div className="text-center mb-16">
+        <div className="text-left mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Transform Your Testing?
           </h2>
-          <p className="text-xl text-primary-100 max-w-3xl mx-auto">
-            Write tests in plain English, validate with AI, and fix failures fast with Quent Analyze.
-          </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Benefits */}
-          <div>
-            <h3 className="text-2xl font-semibold mb-8">Why Quent?</h3>
-            <div className="space-y-6">
-              {betaBenefits.map((benefit, index) => (
-                <div key={index} className="flex items-start">
-                  <div className="text-2xl mr-4">{benefit.icon}</div>
-                  <div>
-                    <h4 className="font-semibold mb-2">{benefit.title}</h4>
-                    <p className="text-primary-100">{benefit.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+
 
           {/* Sign-up Form */}
           <div className="bg-white rounded-xl p-8 text-gray-900">
@@ -134,7 +104,7 @@ This person has requested a demo of Quent.`
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-neutral-400 focus:border-transparent"
                 />
               </div>
 
@@ -149,7 +119,7 @@ This person has requested a demo of Quent.`
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-neutral-400 focus:border-transparent"
                 />
               </div>
 
@@ -163,7 +133,7 @@ This person has requested a demo of Quent.`
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-neutral-400 focus:border-transparent"
                 />
               </div>
 
@@ -171,7 +141,7 @@ This person has requested a demo of Quent.`
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-primary-600 hover:bg-primary-700 disabled:bg-gray-400 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
+                className="w-full bg-black hover:bg-neutral-800 disabled:bg-gray-400 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
               >
                 {isSubmitting ? 'Sending...' : 'Book a Demo'}
               </button>

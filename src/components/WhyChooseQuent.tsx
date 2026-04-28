@@ -49,7 +49,7 @@ const WhyChooseQuent: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div key={index} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4 text-2xl">
+              <div className="w-12 h-12 bg-zinc-100 rounded-lg flex items-center justify-center mb-4 text-2xl">
                 {feature.icon}
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">

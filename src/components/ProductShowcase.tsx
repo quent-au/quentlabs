@@ -21,12 +21,12 @@ const FeatureStep = ({
 }) => (
   <div
     className={`inline-flex items-center gap-3 rounded-full px-4 py-2 mb-6 ${
-      accent === 'accent' ? 'bg-accent-100 text-accent-700' : 'bg-primary-100 text-primary-700'
+      accent === 'accent' ? 'bg-zinc-200 text-zinc-900' : 'bg-zinc-100 text-zinc-800'
     }`}
   >
     <span
       className={`flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold ${
-        accent === 'accent' ? 'bg-accent-600 text-white' : 'bg-primary-600 text-white'
+        accent === 'accent' ? 'bg-zinc-800 text-white' : 'bg-black text-white'
       }`}
     >
       {step}
@@ -39,18 +39,19 @@ const ProductShowcase: React.FC = () => {
   return (
     <section id="showcase" className="relative section-padding overflow-hidden">
       {/* Subtle background gradient mesh */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white via-primary-50/30 to-accent-50/20" />
-      <div className="pointer-events-none absolute -top-40 -right-40 h-80 w-80 rounded-full bg-primary-200/40 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-accent-200/40 blur-3xl" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white via-gray-50/40 to-gray-100/30" />
+      <div className="pointer-events-none absolute -top-40 -right-40 h-80 w-80 rounded-full bg-zinc-200/30 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-zinc-200/25 blur-3xl" />
 
       <div className="container-max relative">
         {/* Section header */}
         <div className="text-center mb-20">
-          <p className="inline-block rounded-full bg-primary-100 text-primary-700 text-sm font-semibold px-4 py-1.5 mb-6">
+          {/* <p className="inline-block rounded-full bg-primary-100 text-primary-700 text-sm font-semibold px-4 py-1.5 mb-6">
             How it works
-          </p>
+          </p> */}
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
-            How Quent <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-accent-600">Works</span>
+            How Quent{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-500">Works</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
             From plain English to AI validation and failure analysis—all in one testing agent.
@@ -74,7 +75,7 @@ const ProductShowcase: React.FC = () => {
               </p>
             </div>
             <div className="order-1 lg:order-2 relative group">
-              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-primary-400/20 to-accent-400/20 blur opacity-60 group-hover:opacity-80 transition-opacity" />
+              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-zinc-300/20 to-zinc-400/20 blur opacity-60 group-hover:opacity-80 transition-opacity" />
               <div className="relative rounded-2xl overflow-hidden border border-gray-200/80 bg-white shadow-xl shadow-gray-200/50 ring-1 ring-gray-100">
                 <div className="bg-gray-100 px-4 py-3 flex items-center gap-2 border-b border-gray-200">
                   <div className="flex gap-2">
@@ -98,7 +99,7 @@ const ProductShowcase: React.FC = () => {
         <div className="mb-24 md:mb-32">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
             <div className="relative group order-1 lg:order-1">
-              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-accent-400/20 to-primary-400/20 blur opacity-60 group-hover:opacity-80 transition-opacity" />
+              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-zinc-300/20 to-zinc-400/20 blur opacity-60 group-hover:opacity-80 transition-opacity" />
               <div className="relative rounded-2xl overflow-hidden border border-gray-200/80 bg-white shadow-xl shadow-gray-200/50 ring-1 ring-gray-100">
                 <img
                   src={IMAGES.aiValidate1}
@@ -110,7 +111,7 @@ const ProductShowcase: React.FC = () => {
             <div className="order-2 lg:order-2">
               <FeatureStep step={2} icon="👁️" title="AI validates like a human would" accent="accent" />
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 leading-tight">
-                One <code className="rounded-lg bg-accent-100 px-2.5 py-1 text-accent-700 font-semibold text-lg">validate</code> call, not dozens of assertions
+                One <code className="rounded-lg bg-zinc-200 px-2.5 py-1 text-zinc-800 font-semibold text-lg">validate</code> call, not dozens of assertions
               </h3>
               <p className="text-gray-600 mb-5 leading-relaxed">
                 Use plain English checks: “4 products displayed”, “Women filter checkbox is checked”, “all products are Women’s”.
@@ -140,7 +141,7 @@ const ProductShowcase: React.FC = () => {
               </p>
             </div>
             <div className="relative group">
-              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-accent-400/20 to-primary-400/20 blur opacity-60 group-hover:opacity-80 transition-opacity" />
+              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-zinc-300/20 to-zinc-400/20 blur opacity-60 group-hover:opacity-80 transition-opacity" />
               <div className="relative rounded-2xl overflow-hidden border border-gray-200/80 bg-white shadow-xl shadow-gray-200/50 ring-1 ring-gray-100">
                 <img
                   src={IMAGES.analyzeWithQuent}
@@ -151,9 +152,9 @@ const ProductShowcase: React.FC = () => {
             </div>
           </div>
           <div className="max-w-4xl mx-auto">
-            <div className="rounded-2xl overflow-hidden border-2 border-accent-200/60 bg-white shadow-xl shadow-accent-200/20 ring-1 ring-accent-100">
-              <div className="bg-gradient-to-r from-accent-50 to-primary-50 px-5 py-3 flex items-center gap-2 border-b border-accent-200/60">
-                <span className="text-accent-600 font-semibold">Failure Analysis</span>
+            <div className="rounded-2xl overflow-hidden border-2 border-gray-200 bg-white shadow-xl shadow-gray-200/20 ring-1 ring-gray-100">
+              <div className="bg-gradient-to-r from-gray-50 to-gray-100 px-5 py-3 flex items-center gap-2 border-b border-gray-200">
+                <span className="text-gray-800 font-semibold">Failure Analysis</span>
                 <span className="text-xs text-gray-500">— Modify test with AI</span>
               </div>
               <img
