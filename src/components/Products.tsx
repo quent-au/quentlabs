@@ -8,10 +8,6 @@ const products = [
       'AI voice agents that answer calls, book appointments and handle customer questions, so small business owners can focus on their craft. We are starting with hair salons.',
     href: 'tel:+61347090759',
     cta: 'Call our test number: +61 3 4709 0759',
-    secondary: {
-      href: 'mailto:abhi@quentlabs.com?subject=Voice%20AI%20for%20Small%20Business',
-      label: 'Get in touch',
-    },
   },
   {
     name: 'Quent Test Agent',
@@ -53,11 +49,6 @@ const Products: React.FC = () => (
             >
               {p.cta}
             </a>
-            {p.secondary && (
-              <a href={p.secondary.href} className="text-center text-accent-600 font-medium hover:underline mt-3">
-                {p.secondary.label}
-              </a>
-            )}
           </div>
         ))}
       </div>
