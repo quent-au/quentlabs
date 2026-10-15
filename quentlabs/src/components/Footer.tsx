@@ -17,7 +17,10 @@ const Footer: React.FC = () => {
                 <span className="text-xl font-bold">Quent Labs</span>
               </div>
               <p className="text-gray-400 mb-4">
-                Quality Agents for scalable mobile test automation in plain English.
+                An AI solutions company building Voice AI for small business, the Quent test agent and the Aewa accent coach.
+              </p>
+              <p className="text-gray-400 mb-4">
+                <a href="mailto:abhi@quentlabs.com" className="hover:text-white">abhi@quentlabs.com</a>
               </p>
               <a href="https://github.com" className="text-gray-400 hover:text-white">
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -30,7 +33,9 @@ const Footer: React.FC = () => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Product</h3>
               <ul className="space-y-2">
-                <li><a href="#features" className="text-gray-400 hover:text-white">Features</a></li>
+                <li><a href="#products" className="text-gray-400 hover:text-white">Voice AI for Small Business</a></li>
+                <li><a href="#quent" className="text-gray-400 hover:text-white">Quent Test Agent</a></li>
+                <li><a href="https://aewa.au/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">Aewa</a></li>
                 <li><a href="#cli" className="text-gray-400 hover:text-white">CLI</a></li>
                 <li><a href="#cloud" className="text-gray-400 hover:text-white">Cloud</a></li>
                 <li><a href="#pricing" className="text-gray-400 hover:text-white">Pricing</a></li>

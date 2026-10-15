@@ -1,6 +1,8 @@
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Products from './components/Products';
+import QuentHero from './components/QuentHero';
 import WhyChooseQuent from './components/WhyChooseQuent';
 import HowQuentWorks from './components/HowQuentWorks';
 import CLIExamples from './components/CLIExamples';
@@ -14,6 +16,8 @@ function App() {
     <div className="min-h-screen bg-white">
       <Header />
       <Hero />
+      <Products />
+      <QuentHero />
       <WhyChooseQuent />
       <HowQuentWorks />
       <CLIExamples />

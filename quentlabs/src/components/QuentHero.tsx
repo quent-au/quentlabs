@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Hero: React.FC = () => {
+const QuentHero: React.FC = () => {
   const scrollToBeta = () => {
     const element = document.getElementById('ready-to-transform');
     if (element) {
@@ -9,12 +9,12 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="section-padding bg-gradient-to-br from-primary-50 to-white">
+    <section id="quent" className="section-padding bg-gradient-to-br from-primary-50 to-white">
       <div className="container-max">
         <div className="text-center max-w-4xl mx-auto">
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Write Mobile Tests in{' '}
+            Quent: Write Mobile Tests in{' '}
             <span className="text-accent-600">Plain English</span>
           </h1>
           
@@ -75,4 +75,4 @@ const Hero: React.FC = () => {
   );
 };
 
-export default Hero;
+export default QuentHero;
