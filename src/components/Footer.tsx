@@ -19,13 +19,6 @@ const Footer: React.FC = () => {
               <p className="text-gray-400 mb-3">
                 An AI solutions company building Voice AI for small business, the Quent test agent and the Aewa accent coach.
               </p>
-              <p className="text-gray-400 mb-3">
-                <a href="mailto:abhi@quentlabs.com" className="hover:text-white">abhi@quentlabs.com</a>
-              </p>
-              <h2 className="text-gray-400 mb-3"> Try Quent Now</h2>
-              <a href="https://quent.com/download" className="text-gray-300 hover:text-white underline-offset-2 hover:underline">
-                Download for macOS
-              </a>
             </div>
           </div>
         </div>
