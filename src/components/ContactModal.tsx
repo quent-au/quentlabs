@@ -62,7 +62,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ onClose }) => {
 
         {status === 'success' ? (
           <div className="text-center py-6">
-            <p className="text-gray-900 font-medium mb-4">Thanks! Your message has been sent.</p>
+            <p className="text-gray-900 font-medium mb-4">Thanks! Your message has been sent. We will be in touch</p>
             <button type="button" onClick={onClose} className="btn-primary">Close</button>
           </div>
         ) : (
