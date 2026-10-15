@@ -2,10 +2,18 @@ import React, { useEffect, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { EMAILJS_CONFIG } from '../config/emailjs';
 
+const PRODUCT_OPTIONS = [
+  'Voice AI for Small Business',
+  'Quent Test Agent',
+  'Aewa',
+  'General enquiry',
+];
+
 type ContactModalProps = { onClose: () => void };
 
 const ContactModal: React.FC<ContactModalProps> = ({ onClose }) => {
   const [name, setName] = useState('');
+  const [product, setProduct] = useState(PRODUCT_OPTIONS[0]);
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
@@ -26,12 +34,12 @@ const ContactModal: React.FC<ContactModalProps> = ({ onClose }) => {
         EMAILJS_CONFIG.TEMPLATE_ID,
         {
           to_email: EMAILJS_CONFIG.TO_EMAIL,
-          subject: EMAILJS_CONFIG.SUBJECT,
+          subject: `${EMAILJS_CONFIG.SUBJECT} - ${product}`,
           from_name: name,
           from_email: '',
           company: '',
-          use_case: '',
-          message: `New contact message from ${name}:\n\n${message}`,
+          use_case: product,
+          message: `New contact message from ${name}\nProduct: ${product}\n\n${message}`,
         },
         EMAILJS_CONFIG.PUBLIC_KEY
       );
@@ -77,6 +85,19 @@ const ContactModal: React.FC<ContactModalProps> = ({ onClose }) => {
                 onChange={(e) => setName(e.target.value)}
                 className="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"
               />
+            </div>
+            <div>
+              <label htmlFor="contact-product" className="block text-sm font-medium text-gray-700 mb-1">Product</label>
+              <select
+                id="contact-product"
+                value={product}
+                onChange={(e) => setProduct(e.target.value)}
+                className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"
+              >
+                {PRODUCT_OPTIONS.map((o) => (
+                  <option key={o} value={o}>{o}</option>
+                ))}
+              </select>
             </div>
             <div>
               <label htmlFor="contact-message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
