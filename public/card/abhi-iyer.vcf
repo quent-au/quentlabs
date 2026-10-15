@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Iyer;Abhi;;;
+FN:Abhi Iyer
+ORG:Quent Labs
+TITLE:Founder
+EMAIL;TYPE=INTERNET,WORK:abhi@quentlabs.com
+item1.TEL;TYPE=VOICE:+61347090759
+item1.X-ABLabel:Voice AI demo
+URL:https://quentlabs.com/
+NOTE:Voice AI for small business - an AI receptionist that answers calls and books appointments. Card: https://quentlabs.com/card/
+END:VCARD
