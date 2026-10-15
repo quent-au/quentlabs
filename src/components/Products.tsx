@@ -14,8 +14,9 @@ const products = [
     tag: 'Mobile test automation',
     description:
       'Write mobile tests in plain English. Quent turns text descriptions into scalable, low-maintenance mobile automation.',
-    href: '#quent',
-    cta: 'Learn more',
+    href: 'https://github.com/quent-au/quent/releases/',
+    cta: 'Download Quent',
+    external: true,
   },
   {
     name: 'Aewa',

@@ -7,13 +7,6 @@ const Header: React.FC<HeaderProps> = ({ variant = 'default' }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const dark = variant === 'heroDark';
 
-  const scrollToBeta = () => {
-    const element = document.getElementById('ready-to-transform');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <>
       {/* Development Preview Banner */}
@@ -88,16 +81,16 @@ const Header: React.FC<HeaderProps> = ({ variant = 'default' }) => {
                 </svg>
                 Downloads
               </a>
-              <button
-                onClick={scrollToBeta}
+              <a
+                href="mailto:abhi@quentlabs.com"
                 className={
                   dark
                     ? 'font-semibold py-2.5 px-5 rounded-lg bg-white text-slate-900 hover:bg-slate-200 transition-colors'
                     : 'btn-primary'
                 }
               >
-                Book a Demo
-              </button>
+                Contact Us
+              </a>
             </nav>
 
             {/* Mobile Menu Button */}
@@ -137,12 +130,12 @@ const Header: React.FC<HeaderProps> = ({ variant = 'default' }) => {
                 >
                   Downloads
                 </a>
-                <button
-                  onClick={scrollToBeta}
-                  className={dark ? 'w-full font-semibold py-2.5 px-5 rounded-lg bg-white text-slate-900' : 'btn-primary w-full'}
+                <a
+                  href="mailto:abhi@quentlabs.com"
+                  className={dark ? 'block text-center w-full font-semibold py-2.5 px-5 rounded-lg bg-white text-slate-900' : 'btn-primary block text-center w-full'}
                 >
-                  Book a Demo
-                </button>
+                  Contact Us
+                </a>
               </div>
             </div>
           )}
