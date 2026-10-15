@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import ContactModal from './ContactModal';
 
 type HeaderProps = { variant?: 'default' | 'heroDark' };
 
 const Header: React.FC<HeaderProps> = ({ variant = 'default' }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
   const dark = variant === 'heroDark';
 
   return (
@@ -68,8 +70,9 @@ const Header: React.FC<HeaderProps> = ({ variant = 'default' }) => {
               >
                 Products
               </a>
-              <a
-                href="mailto:abhi@quentlabs.com"
+              <button
+                type="button"
+                onClick={() => setIsContactOpen(true)}
                 className={
                   dark
                     ? 'font-semibold py-2.5 px-5 rounded-lg bg-white text-slate-900 hover:bg-slate-200 transition-colors'
@@ -77,7 +80,7 @@ const Header: React.FC<HeaderProps> = ({ variant = 'default' }) => {
                 }
               >
                 Contact Us
-              </a>
+              </button>
             </nav>
 
             {/* Mobile Menu Button */}
@@ -111,17 +114,22 @@ const Header: React.FC<HeaderProps> = ({ variant = 'default' }) => {
                 >
                   Products
                 </a>
-                <a
-                  href="mailto:abhi@quentlabs.com"
+                <button
+                  type="button"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    setIsContactOpen(true);
+                  }}
                   className={dark ? 'block text-center w-full font-semibold py-2.5 px-5 rounded-lg bg-white text-slate-900' : 'btn-primary block text-center w-full'}
                 >
                   Contact Us
-                </a>
+                </button>
               </div>
             </div>
           )}
         </div>
       </header>
+      {isContactOpen && <ContactModal onClose={() => setIsContactOpen(false)} />}
     </>
   );
 };

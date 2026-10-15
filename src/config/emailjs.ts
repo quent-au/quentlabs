@@ -9,10 +9,10 @@ export const EMAILJS_CONFIG = {
   PUBLIC_KEY: 'Us0kivYwplvWAa24t', // e.g., 'user_abc123xyz' - from EmailJS Account > General
   
   // Email recipient - where beta signups will be sent
-  TO_EMAIL: 'abhilashsiyer@gmail.com',
+  TO_EMAIL: 'abhi@quentlabs.com',
   
   // Email subject
-  SUBJECT: 'New Quent Labs Beta Signup',
+  SUBJECT: 'New Quent Labs Contact Message',
 };
 
 // Email template variables
