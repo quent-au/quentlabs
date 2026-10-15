@@ -54,15 +54,15 @@ const ContactModal: React.FC<ContactModalProps> = ({ onClose }) => {
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 px-4"
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm px-4"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
       aria-labelledby="contact-title"
     >
-      <div className="bg-white rounded-xl shadow-xl w-full max-w-md p-6" onClick={(e) => e.stopPropagation()}>
+      <div className="bg-white rounded-3xl shadow-2xl w-full max-w-md p-8" onClick={(e) => e.stopPropagation()}>
         <div className="flex items-start justify-between mb-4">
-          <h2 id="contact-title" className="text-xl font-semibold text-gray-900">Contact Us</h2>
+          <h2 id="contact-title" className="text-2xl font-semibold text-gray-900">Contact Us</h2>
           <button type="button" onClick={onClose} aria-label="Close" className="text-gray-400 hover:text-gray-700 text-2xl leading-none">
             &times;
           </button>
@@ -83,7 +83,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ onClose }) => {
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"
+                className="w-full rounded-xl border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"
               />
             </div>
             <div>
@@ -92,7 +92,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ onClose }) => {
                 id="contact-product"
                 value={product}
                 onChange={(e) => setProduct(e.target.value)}
-                className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"
+                className="w-full rounded-xl border border-gray-300 bg-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"
               >
                 {PRODUCT_OPTIONS.map((o) => (
                   <option key={o} value={o}>{o}</option>
@@ -107,7 +107,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ onClose }) => {
                 rows={5}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                className="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"
+                className="w-full rounded-xl border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"
               />
             </div>
             {status === 'error' && (

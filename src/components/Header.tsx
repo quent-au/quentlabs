@@ -1,82 +1,59 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ContactModal from './ContactModal';
+import Logo from './Logo';
 
 type HeaderProps = { variant?: 'default' | 'heroDark' };
 
 const Header: React.FC<HeaderProps> = ({ variant = 'default' }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const dark = variant === 'heroDark';
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const linkClass = dark
+    ? 'text-slate-300 hover:text-white'
+    : 'text-gray-600 hover:text-gray-900';
 
   return (
     <>
-      {/* Development Preview Banner */}
-      {/* <div className="bg-primary-800 text-white text-center py-2 text-sm">
-        This is a temporary development preview and will be removed for production. Do not use this for mission critical applications.
-      </div> */}
-      
-      {/* Main Header */}
       <header
-        className={`z-50 ${
+        className={`z-50 px-4 sm:px-6 lg:px-8 transition-all duration-300 ${
           dark
             ? 'absolute inset-x-0 top-0 bg-slate-950/40 border-b border-white/5 backdrop-blur-md'
-            : 'bg-white shadow-sm sticky top-0'
+            : `sticky top-0 bg-white/80 backdrop-blur-md border-b ${
+                scrolled ? 'border-gray-200 shadow-sm' : 'border-transparent'
+              }`
         }`}
       >
         <div className="container-max">
-          <div className="flex items-center justify-between py-4 px-4 sm:px-6 lg:px-8">
-            {/* Logo */}
-            <Link to="/" className="flex items-center space-x-2">
-              <div
-                className={`w-8 h-8 rounded-lg flex items-center justify-center ${
-                  dark ? 'bg-white text-slate-900' : 'bg-black'
-                }`}
-              >
-                <svg
-                  className={`w-5 h-5 ${dark ? 'text-slate-900' : 'text-white'}`}
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </div>
-              <span className={`text-xl font-bold ${dark ? 'text-white' : 'text-gray-900'}`}>Quent Labs</span>
+          <div className="flex items-center justify-between py-4">
+            <Link to="/" aria-label="Quent Labs home">
+              <Logo light={dark} />
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-8">
-              {/* <a
-                href="#showcase"
-                className={
-                  dark
-                    ? 'text-slate-300 hover:text-white transition-colors'
-                    : 'text-gray-600 hover:text-gray-900 transition-colors'
-                }
-              >
-                How it Works
-              </a> */}
-              <a
-                href="/#products"
-                className={`${
-                  dark
-                    ? 'text-slate-300 hover:text-white'
-                    : 'text-gray-600 hover:text-gray-900'
-                } transition-colors`}
-              >
+            <nav className="hidden md:flex items-center gap-8">
+              <a href="/#products" className={`font-display font-medium transition-colors ${linkClass}`}>
                 Products
               </a>
+              <Link to="/case-studies" className={`font-display font-medium transition-colors ${linkClass}`}>
+                Case studies
+              </Link>
               <button
                 type="button"
                 onClick={() => setIsContactOpen(true)}
                 className={
                   dark
-                    ? 'font-semibold py-2.5 px-5 rounded-lg bg-white text-slate-900 hover:bg-slate-200 transition-colors'
-                    : 'btn-primary'
+                    ? 'font-display font-semibold py-2.5 px-5 rounded-full bg-white text-slate-900 hover:bg-slate-200 transition-colors'
+                    : 'btn-primary py-2.5 px-5'
                 }
               >
                 Contact Us
@@ -85,11 +62,17 @@ const Header: React.FC<HeaderProps> = ({ variant = 'default' }) => {
 
             {/* Mobile Menu Button */}
             <button
-              className={`md:hidden p-2 ${dark ? 'text-white' : ''}`}
+              className={`md:hidden p-2 ${dark ? 'text-white' : 'text-gray-900'}`}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+              aria-expanded={isMenuOpen}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                {isMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
               </svg>
             </button>
           </div>
@@ -102,25 +85,27 @@ const Header: React.FC<HeaderProps> = ({ variant = 'default' }) => {
               }`}
             >
               <div className="px-4 py-4 space-y-4">
-                {/* <a
-                  href="#showcase"
-                  className={`block ${dark ? 'text-slate-200 hover:text-white' : 'text-gray-600 hover:text-gray-900'}`}
-                >
-                  How it Works
-                </a> */}
                 <a
                   href="/#products"
-                  className={`block ${dark ? 'text-slate-200 hover:text-white' : 'text-gray-600 hover:text-gray-900'}`}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`block font-display font-medium ${linkClass}`}
                 >
                   Products
                 </a>
+                <Link to="/case-studies" className={`block font-display font-medium ${linkClass}`}>
+                  Case studies
+                </Link>
                 <button
                   type="button"
                   onClick={() => {
                     setIsMenuOpen(false);
                     setIsContactOpen(true);
                   }}
-                  className={dark ? 'block text-center w-full font-semibold py-2.5 px-5 rounded-lg bg-white text-slate-900' : 'btn-primary block text-center w-full'}
+                  className={
+                    dark
+                      ? 'block text-center w-full font-display font-semibold py-2.5 px-5 rounded-full bg-white text-slate-900'
+                      : 'btn-primary w-full'
+                  }
                 >
                   Contact Us
                 </button>

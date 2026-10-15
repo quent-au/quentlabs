@@ -1,33 +1,28 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import Logo from './Logo';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="border-t border-gray-100 bg-white px-4 sm:px-6 lg:px-8">
       <div className="container-max">
-        <div className="py-8">
-          <div className="flex justify-center">
-            {/* Logo and Description */}
-            <div className="text-center max-w-md">
-              <div className="flex items-center justify-center space-x-2 mb-3">
-                <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center">
-                  <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <span className="text-xl font-bold">Quent Labs</span>
-              </div>
-              <p className="text-gray-400 mb-3">
-                An AI solutions company building Voice AI for small business, the Quent test agent and the Aewa accent coach.
-              </p>
-            </div>
+        <div className="flex flex-col items-center justify-between gap-6 py-12 md:flex-row md:items-start">
+          <div className="max-w-sm text-center md:text-left">
+            <Link to="/" className="inline-block" aria-label="Quent Labs home">
+              <Logo />
+            </Link>
+            <p className="mt-4 text-gray-500">
+              An AI solutions company building Voice AI for small business, the Quent test agent and the Aewa accent coach.
+            </p>
           </div>
+          <nav className="flex gap-8 font-display font-medium text-gray-600">
+            <a href="/#products" className="hover:text-gray-900 transition-colors">Products</a>
+            <Link to="/case-studies" className="hover:text-gray-900 transition-colors">Case studies</Link>
+          </nav>
         </div>
 
-        {/* Copyright */}
-        <div className="border-t border-gray-800 py-4">
-          <div className="text-center text-gray-400">
-            © 2024 Quent Labs. All rights reserved.
-          </div>
+        <div className="border-t border-gray-100 py-6 text-center text-sm text-gray-400 md:text-left">
+          © {new Date().getFullYear()} Quent Labs. All rights reserved.
         </div>
       </div>
     </footer>

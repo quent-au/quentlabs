@@ -4,31 +4,42 @@
 
 @layer base {
   html {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Nunito', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-gray-800;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: 'Fredoka', system-ui, sans-serif;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-black hover:bg-neutral-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200;
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-black px-6 py-3 font-display font-semibold text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-neutral-800 hover:shadow-md;
   }
-  
+
   .btn-secondary {
-    @apply border-2 border-black text-gray-900 hover:bg-black hover:text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200;
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-gray-900 px-6 py-3 font-display font-semibold text-gray-900 transition-all duration-200 hover:-translate-y-0.5 hover:bg-gray-900 hover:text-white;
   }
-  
+
+  .eyebrow {
+    @apply font-display text-xs font-semibold uppercase tracking-[0.2em] text-gray-500;
+  }
+
   .section-padding {
-    @apply py-16 px-4 sm:px-6 lg:px-8;
+    @apply py-20 px-4 sm:px-6 lg:px-8 md:py-28;
   }
-  
+
   .container-max {
     @apply max-w-7xl mx-auto;
   }
 }
-
-
-
-
-
-
-
