@@ -47,6 +47,9 @@ const Header: React.FC<HeaderProps> = ({ variant = 'default' }) => {
               <Link to="/case-studies" className={`font-display font-medium transition-colors ${linkClass}`}>
                 Case studies
               </Link>
+              <a href="/card/" className={`font-display font-medium transition-colors ${linkClass}`}>
+                Voice AI card
+              </a>
               <button
                 type="button"
                 onClick={() => setIsContactOpen(true)}
@@ -95,6 +98,9 @@ const Header: React.FC<HeaderProps> = ({ variant = 'default' }) => {
                 <Link to="/case-studies" className={`block font-display font-medium ${linkClass}`}>
                   Case studies
                 </Link>
+                <a href="/card/" className={`block font-display font-medium ${linkClass}`}>
+                  Voice AI card
+                </a>
                 <button
                   type="button"
                   onClick={() => {

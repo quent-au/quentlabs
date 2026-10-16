@@ -18,6 +18,7 @@ const Footer: React.FC = () => {
           <nav className="flex gap-8 font-display font-medium text-gray-600">
             <a href="/#products" className="hover:text-gray-900 transition-colors">Products</a>
             <Link to="/case-studies" className="hover:text-gray-900 transition-colors">Case studies</Link>
+            <a href="/card/" className="hover:text-gray-900 transition-colors">Voice AI card</a>
           </nav>
         </div>
 
