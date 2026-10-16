@@ -1,0 +1,27 @@
+{
+  "cardUrl": "https://quentlabs.com/card/",
+  "apple": {
+    "teamIdentifier": "8XTSXZQVA7",
+    "passTypeIdentifier": "pass.com.quentlabs.card",
+    "serialNumber": "abhi-iyer-card"
+  },
+  "google": {
+    "issuerId": "YOUR_ISSUER_ID",
+    "classSuffix": "quentlabs_card",
+    "objectSuffix": "abhi_iyer"
+  },
+  "person": {
+    "name": "Abhi Iyer",
+    "title": "Founder",
+    "company": "Quent Labs",
+    "email": "abhi@quentlabs.com",
+    "demoPhone": "+61347090759",
+    "demoPhoneDisplay": "+61 3 4709 0759",
+    "website": "https://quentlabs.com/"
+  },
+  "voiceAi": {
+    "heading": "Voice AI for small business",
+    "tagline": "An AI receptionist that picks up every call.",
+    "body": "AI voice agents that answer calls, book appointments and handle customer questions. Starting with hair salons."
+  }
+}

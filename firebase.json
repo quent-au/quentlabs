@@ -25,6 +25,15 @@
             "value": "attachment; filename=\"Abhi Iyer.vcf\""
           }
         ]
+      },
+      {
+        "source": "**/*.pkpass",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/vnd.apple.pkpass"
+          }
+        ]
       }
     ]
   }

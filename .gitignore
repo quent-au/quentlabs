@@ -94,3 +94,7 @@ Thumbs.db
 
 # dataconnect generated files
 .dataconnect
+
+# Wallet pass signing keys and certificates (never commit)
+passes/certs/
+passes/build/

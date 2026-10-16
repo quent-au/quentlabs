@@ -151,6 +151,11 @@
       .btn:hover { background: var(--ink); color: #ffffff; }
       .btn.primary:hover { background: #262626; }
 
+      .wallets { margin-top: 10px; display: grid; gap: 10px; }
+      .wallets[hidden], .btn.wallet[hidden] { display: none; }
+      .btn.wallet { width: 100%; background: #000000; border-color: #000000; color: #ffffff; }
+      .btn.wallet:hover { background: #262626; }
+
       /* Contact rows */
       .rows { margin-top: 18px; border: 1px solid var(--line); border-radius: 20px; overflow: hidden; }
       .row { display: flex; align-items: center; gap: 14px; padding: 14px 16px; transition: background 0.15s ease; }
@@ -244,6 +249,17 @@
         </button>
       </div>
 
+      <div class="wallets" id="wallets" hidden>
+        <a class="btn wallet" id="apple-wallet" href="/card/abhi-iyer.pkpass" hidden>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.62c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.17-1.53 2.66-.39 6.6 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.47-.03-.01-2.3-.88-2.32-3.5zM14.2 6.16c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.65-1.05 1.68-.92 2.68.97.07 1.96-.49 2.56-1.23z"/></svg>
+          Add to Apple Wallet
+        </a>
+        <a class="btn wallet" id="google-wallet" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3" /></svg>
+          Add to Google Wallet
+        </a>
+      </div>
+
       <nav class="rows" aria-label="Contact details">
         <a class="row" href="mailto:abhi@quentlabs.com">
           <span class="ic" aria-hidden="true">
@@ -293,6 +309,27 @@
             show(url);
           }
         });
+
+        // Show each wallet button only once its pass exists, and only on matching platforms.
+        var ua = navigator.userAgent;
+        var isApple = /iPhone|iPad|iPod|Macintosh/.test(ua);
+        var isAndroid = /Android/.test(ua);
+        var wallets = document.getElementById('wallets');
+        var apple = document.getElementById('apple-wallet');
+        var google = document.getElementById('google-wallet');
+        if (google.getAttribute('href') && !isApple) {
+          google.hidden = false;
+          wallets.hidden = false;
+        }
+        if (!isAndroid && window.fetch) {
+          fetch(apple.getAttribute('href'), { method: 'HEAD' }).then(function (r) {
+            var type = r.headers.get('content-type') || '';
+            if (r.ok && type.indexOf('pkpass') !== -1) {
+              apple.hidden = false;
+              wallets.hidden = false;
+            }
+          }).catch(function () {});
+        }
       })();
     </script>
   </body>
