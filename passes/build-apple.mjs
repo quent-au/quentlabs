@@ -43,10 +43,34 @@ const pass = {
     ],
     backFields: [
       { key: 'about', label: voiceAi.heading, value: voiceAi.body },
-      { key: 'call', label: 'Call the live demo', value: person.demoPhoneDisplay },
-      { key: 'emailBack', label: 'Email', value: person.email },
-      { key: 'card', label: 'Digital card', value: cardUrl },
-      { key: 'web', label: 'Website', value: person.website },
+      {
+        key: 'call',
+        label: 'Call the live demo',
+        value: person.demoPhoneDisplay,
+        attributedValue: `<a href="tel:${person.demoPhone}">${person.demoPhoneDisplay}</a>`,
+        dataDetectorTypes: ['PKDataDetectorTypePhoneNumber'],
+      },
+      {
+        key: 'emailBack',
+        label: 'Email',
+        value: person.email,
+        attributedValue: `<a href="mailto:${person.email}">${person.email}</a>`,
+        dataDetectorTypes: ['PKDataDetectorTypeLink'],
+      },
+      {
+        key: 'card',
+        label: 'Digital card',
+        value: cardUrl,
+        attributedValue: `<a href="${cardUrl}">${cardUrl}</a>`,
+        dataDetectorTypes: ['PKDataDetectorTypeLink'],
+      },
+      {
+        key: 'web',
+        label: 'Website',
+        value: person.website,
+        attributedValue: `<a href="${person.website}">${person.website}</a>`,
+        dataDetectorTypes: ['PKDataDetectorTypeLink'],
+      },
     ],
   },
   barcodes: [
