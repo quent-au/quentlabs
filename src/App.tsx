@@ -4,12 +4,14 @@ import CaseStudyLayout from './layouts/CaseStudyLayout';
 import HomePage from './pages/HomePage';
 import CaseStudiesIndexPage from './pages/CaseStudiesIndexPage';
 import InstantScriptsCaseStudyPage from './pages/InstantScriptsCaseStudyPage';
+import VoiceAIPage from './pages/VoiceAIPage';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/voice-ai" element={<VoiceAIPage />} />
         <Route path="/case-studies" element={<CaseStudyLayout />}>
           <Route index element={<CaseStudiesIndexPage />} />
           <Route path="instant-scripts" element={<InstantScriptsCaseStudyPage />} />
