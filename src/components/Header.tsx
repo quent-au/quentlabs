@@ -41,13 +41,16 @@ const Header: React.FC<HeaderProps> = ({ variant = 'default' }) => {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8">
-              <a href="/#products" className={`font-display font-medium transition-colors ${linkClass}`}>
-                Products
+              <a href="/#products" className={`text-sm font-medium transition-colors ${linkClass}`}>
+                What we do
               </a>
-              <Link to="/case-studies" className={`font-display font-medium transition-colors ${linkClass}`}>
+              <Link to="/case-studies" className={`text-sm font-medium transition-colors ${linkClass}`}>
                 Case studies
               </Link>
-              <a href="/card/" className={`font-display font-medium transition-colors ${linkClass}`}>
+              <a href="/#about" className={`text-sm font-medium transition-colors ${linkClass}`}>
+                About
+              </a>
+              <a href="/card/" className={`text-sm font-medium transition-colors ${linkClass}`}>
                 Voice AI card
               </a>
               <button
@@ -59,7 +62,7 @@ const Header: React.FC<HeaderProps> = ({ variant = 'default' }) => {
                     : 'btn-primary py-2.5 px-5'
                 }
               >
-                Contact Us
+                Contact us
               </button>
             </nav>
 
@@ -91,14 +94,25 @@ const Header: React.FC<HeaderProps> = ({ variant = 'default' }) => {
                 <a
                   href="/#products"
                   onClick={() => setIsMenuOpen(false)}
-                  className={`block font-display font-medium ${linkClass}`}
+                  className={`block text-sm font-medium ${linkClass}`}
                 >
-                  Products
+                  What we do
                 </a>
-                <Link to="/case-studies" className={`block font-display font-medium ${linkClass}`}>
+                <Link
+                  to="/case-studies"
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`block text-sm font-medium ${linkClass}`}
+                >
                   Case studies
                 </Link>
-                <a href="/card/" className={`block font-display font-medium ${linkClass}`}>
+                <a
+                  href="/#about"
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`block text-sm font-medium ${linkClass}`}
+                >
+                  About
+                </a>
+                <a href="/card/" className={`block text-sm font-medium ${linkClass}`}>
                   Voice AI card
                 </a>
                 <button
@@ -113,7 +127,7 @@ const Header: React.FC<HeaderProps> = ({ variant = 'default' }) => {
                       : 'btn-primary w-full'
                   }
                 >
-                  Contact Us
+                  Contact us
                 </button>
               </div>
             </div>

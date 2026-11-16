@@ -6,6 +6,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        ink: '#17181b',
+        cream: '#f7f3ea',
+        gold: { DEFAULT: '#a8823a', light: '#c9a96a' },
         // Neutrals / black (replaces former blue primary)
         primary: {
           50: '#fafafa',
@@ -33,8 +36,9 @@ module.exports = {
         }
       },
       fontFamily: {
-        sans: ['Nunito', 'system-ui', 'sans-serif'],
-        display: ['Fredoka', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['Fraunces', 'Georgia', 'serif'],
       },
     },
   },

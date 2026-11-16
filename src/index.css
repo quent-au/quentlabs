@@ -4,35 +4,38 @@
 
 @layer base {
   html {
-    font-family: 'Nunito', system-ui, sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
   }
 
   body {
-    @apply bg-white text-gray-800;
+    @apply bg-white text-gray-700;
   }
 
   h1,
   h2,
   h3,
   h4 {
-    font-family: 'Fredoka', system-ui, sans-serif;
+    font-family: 'Fraunces', Georgia, serif;
+    font-optical-sizing: auto;
+    letter-spacing: -0.015em;
+    color: #17181b;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-black px-6 py-3 font-display font-semibold text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-neutral-800 hover:shadow-md;
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-medium text-white transition-colors duration-200 hover:bg-black;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-gray-900 px-6 py-3 font-display font-semibold text-gray-900 transition-all duration-200 hover:-translate-y-0.5 hover:bg-gray-900 hover:text-white;
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-gray-300 bg-white px-6 py-3 text-sm font-medium text-ink transition-colors duration-200 hover:border-ink;
   }
 
   .eyebrow {
-    @apply font-display text-xs font-semibold uppercase tracking-[0.2em] text-gray-500;
+    @apply text-xs font-semibold uppercase tracking-[0.18em] text-gold;
   }
 
   .section-padding {
@@ -40,6 +43,6 @@
   }
 
   .container-max {
-    @apply max-w-7xl mx-auto;
+    @apply max-w-6xl mx-auto;
   }
 }

@@ -3,9 +3,8 @@ import emailjs from '@emailjs/browser';
 import { EMAILJS_CONFIG } from '../config/emailjs';
 
 const PRODUCT_OPTIONS = [
-  'Voice AI for Small Business',
-  'Quent Test Agent',
-  'Aewa',
+  'bSpoke (incl. Voice AI)',
+  'Custom solution',
   'General enquiry',
 ];
 

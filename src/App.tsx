@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import CaseStudyLayout from './layouts/CaseStudyLayout';
 import HomePage from './pages/HomePage';
 import CaseStudiesIndexPage from './pages/CaseStudiesIndexPage';
+import AewaCaseStudyPage from './pages/AewaCaseStudyPage';
 import InstantScriptsCaseStudyPage from './pages/InstantScriptsCaseStudyPage';
 import VoiceAIPage from './pages/VoiceAIPage';
 
@@ -14,6 +15,7 @@ function App() {
         <Route path="/voice-ai" element={<VoiceAIPage />} />
         <Route path="/case-studies" element={<CaseStudyLayout />}>
           <Route index element={<CaseStudiesIndexPage />} />
+          <Route path="aewa" element={<AewaCaseStudyPage />} />
           <Route path="instant-scripts" element={<InstantScriptsCaseStudyPage />} />
         </Route>
       </Routes>
