@@ -13,8 +13,9 @@ const Footer: React.FC = () => {
               <Logo light />
             </Link>
             <p className="mt-4">
-              bSpoke, with a Voice AI receptionist, and custom solutions for small businesses in Melbourne
-              and beyond.
+              bSpoke is a platform where you connect your existing tools, build new ones, or use ready-made
+              capabilities like Voice AI that takes calls, makes bookings, takes deposits and answers questions
+              your way. Or just tell us the tool you need, and we'll have it up and running for you.
             </p>
           </div>
           <nav className="flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm font-medium">
