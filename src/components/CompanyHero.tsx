@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ContactModal from './ContactModal';
 import BrowserFrame from './BrowserFrame';
+import GoogleReviewsBadge from './GoogleReviewsBadge';
 
 const CompanyHero: React.FC = () => {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -37,6 +38,9 @@ const CompanyHero: React.FC = () => {
               +61 3 4709 0759
             </a>
           </p>
+          <div className="mt-5">
+            <GoogleReviewsBadge />
+          </div>
         </div>
 
         <div className="relative mx-auto aspect-[5/4] w-full max-w-xl">

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from './Logo';
-import { ABN } from '../config/business';
+import { ABN, GOOGLE_REVIEWS_URL } from '../config/business';
 
 const Footer: React.FC = () => {
   return (
@@ -23,6 +23,7 @@ const Footer: React.FC = () => {
             <Link to="/case-studies" className="transition-colors hover:text-white">Case studies</Link>
             <a href="/#about" className="transition-colors hover:text-white">About</a>
             <a href="/card/" className="transition-colors hover:text-white">Voice AI card</a>
+            <a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-white">Google reviews</a>
             <a href="mailto:abhi@quentlabs.com" className="transition-colors hover:text-white">abhi@quentlabs.com</a>
           </nav>
         </div>
