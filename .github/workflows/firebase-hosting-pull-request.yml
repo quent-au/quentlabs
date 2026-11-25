@@ -17,7 +17,12 @@ jobs:
         with:
           node-version: 22
       - run: npm install -g npm@11.6.2
-      - run: npm ci && CI=false npm run build
+      - run: npm ci
+      - run: node scripts/fetch-google-reviews.mjs
+        env:
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+          GOOGLE_PLACE_ID: ${{ vars.GOOGLE_PLACE_ID }}
+      - run: CI=false npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}

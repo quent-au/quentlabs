@@ -1,0 +1,27 @@
+{
+  "name": "QuentLabs",
+  "rating": 5,
+  "userRatingCount": 2,
+  "mapsUrl": "https://maps.google.com/?cid=15195667198059893686&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+  "fetchedAt": "2026-11-25T00:22:42.392Z",
+  "reviews": [
+    {
+      "author": "Amanda Boyce",
+      "authorUrl": "https://www.google.com/maps/contrib/107932582102818605209/reviews",
+      "authorPhoto": "https://lh3.googleusercontent.com/a-/ALV-UjWPSoaqHl2MkeTquxmdFXqb69dwQlSWs1bA9UNa3fLezSNm2QI=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "text": "I've been working with Abhi from QuentLabs for the last couple of months, building an Australian pronunciation app. The experience has been beyond incredible. Abhi is so detailed and has so much knowledge and passion for what he does. He's also open to listening to my ideas and suggestions too. Even though he is the developer he's open to hearing more about what I want from the app and taking my suggestions on board, which I think creates a really great partnership and a really pleasant experience.\nI would 100% recommend working with QuentLabs and I would love to continue building apps in the future with them.",
+      "relativeTime": "a week ago",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2t4TU5YbHFVMHd6WjBwSE5ERTRiVWhHTkZOUGNIYxAB!2m1!1s0x47665be0e097b35f:0xd2e1dace796a53b6"
+    },
+    {
+      "author": "Srinivasa S",
+      "authorUrl": "https://www.google.com/maps/contrib/103580271474853981815/reviews",
+      "authorPhoto": "https://lh3.googleusercontent.com/a/ACg8ocKYWRlmKT0QxujFLsJcQXS94cxCnqA1G1dbKLxEYpnLbBT3MQ=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "text": "Abhi helped me build a simple app that I use to manage apartment expenses.",
+      "relativeTime": "in the last week",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tZNE5HWnJUak5yWVhWSVVISlhlREJQUjNCMFdHYxAB!2m1!1s0x47665be0e097b35f:0xd2e1dace796a53b6"
+    }
+  ]
+}

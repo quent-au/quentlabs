@@ -16,6 +16,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "fetch-reviews": "node scripts/fetch-google-reviews.mjs",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

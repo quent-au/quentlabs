@@ -30,8 +30,10 @@ const About: React.FC = () => (
         </h2>
         <div className="mx-auto mt-6 max-w-2xl space-y-4 text-lg leading-relaxed text-gray-600 lg:mx-0">
           <p>
-            I'm a software engineer with over 15 years of experience, and I started QuentLabs in
-            Melbourne to put that experience to work for local businesses. I've built{' '}
+            I'm an Applied AI engineer with over 15 years in software solutions. For over two years I've
+            focused on building with AI, including an App Builder that let people create web apps just by
+            describing them in a prompt. I started QuentLabs in Melbourne to put that experience to work
+            for local businesses.{' '}
             <a
               href="https://aewa.au/"
               target="_blank"
@@ -39,12 +41,12 @@ const About: React.FC = () => (
               className="font-semibold text-gray-900 underline decoration-gray-300 underline-offset-4 hover:decoration-gray-900"
             >
               Aewa
-            </a>
-            , an AI accent coach, with an Australian English teacher.
+            </a>{' '}
+            is the first product from QuentLabs, an AI accent coach for Australian English teacher Amanda.
           </p>
           <p>
             Now I'm helping small businesses, whether it's a salon, spa or restaurant, handle their calls
-            with Voice AI and customise it to fit how they work.
+            with AI voice and customise it to fit how they work.
           </p>
         </div>
 
